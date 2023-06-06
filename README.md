@@ -19,3 +19,43 @@ rs.AddAccessRule(rule);
 
 ## // Atnaujiname rakto teises su naujais leidimais
 key.SetAccessControl(rs);
+
+If WScript.Arguments.length = 0 Then
+   Set objShell = CreateObject("Shell.Application")
+   'Pass a bogus argument, say [ uac]
+   objShell.ShellExecute "wscript.exe", Chr(34) & _
+      WScript.ScriptFullName & Chr(34) & " uac", "", "runas", 1
+Else
+
+# Microsoft Internet Explorerio gražinimas į numatytasias naršykles vietoje Edge
+
+Programinis kodas VBScript:
+
+Dim wshShell
+Dim myKey
+
+Set WshShell = CreateObject("WScript.Shell")
+
+myKey = "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Edge\IEToEdge\RedirectionMode"
+WshShell.RegWrite myKey,0,"REG_DWORD"
+
+myKey = "HKEY_CURRENT_USER\SOFTWARE\AppDataLow\Software\Microsoft\Edge\IEToEdge\DisableUpsellEdge"
+WshShell.RegWrite myKey,1,"REG_DWORD"
+
+myKey = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge\IEToEdge\RedirectionMode"
+WshShell.RegWrite myKey,0,"REG_DWORD"
+
+myKey = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Ext\CLSID\1FD49718-1D00-4B19-AF5F-070AF6D5D54C"
+WshShell.RegWrite myKey,0,"REG_DWORD"
+
+myKey = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects\{1FD49718-1D00-4B19-AF5F-070AF6D5D54C}\NoInternetExplorer"
+WshShell.RegWrite myKey,1,"REG_DWORD"
+
+myKey = "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects\{1FD49718-1D00-4B19-AF5F-070AF6D5D54C}\NoInternetExplorer"
+WshShell.RegWrite myKey,1,"REG_DWORD"
+
+Set WshShell = Nothing
+
+CreateObject("InternetExplorer.Application").Visible=true
+
+End If
