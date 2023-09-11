@@ -2,8 +2,11 @@
 
 Pasileidžiam - gpedit.msc
 Einam keliu: Computer Configuration / Administrative Templates / System / User Profiles /
+
 Susirandam - Delete user profiles older than a specified number of days on system restart
+
 Spaudžiam: Enable - ir nustatom "1" dieną.
+
 Paleidžiam kompiuterį iš naujo
 
 # MS Offiso klaida po Windows 10/11 atnaujinimo "Licenzijos klaida"
