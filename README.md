@@ -1,4 +1,4 @@
-## // Trinti Windows 11/10/7 Profilius atsijungiant vartotojui nuo paskyros.
+# Trinti Windows 11/10/7 Profilius atsijungiant vartotojui nuo paskyros.
 
 Pasileidžiam - gpedit.msc
 Einam keliu: Computer Configuration / Administrative Templates / System / User Profiles /
