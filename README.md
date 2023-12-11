@@ -74,6 +74,7 @@ End If
 ## Microsoft Teams vartotoju atvaizdavimas su klaida // Error
 
 Reikų ištrinti failą settings.json
+
 Failo kelias: _%AppDAta%\Roaming\Microsoft\Teams\settings.json_
 
 
