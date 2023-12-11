@@ -1,4 +1,4 @@
-# Trinti Windows 11/10/7 Profilius atsijungiant vartotojui nuo paskyros.
+## Trinti Windows 11/10/7 Profilius atsijungiant vartotojui nuo paskyros.
 
 Pasileidžiam - gpedit.msc
 Einam keliu: Computer Configuration / Administrative Templates / System / User Profiles /
@@ -9,17 +9,17 @@ Spaudžiam: Enable - ir nustatom "1" dieną.
 
 Paleidžiam kompiuterį iš naujo
 
-# MS Offiso klaida po Windows 10/11 atnaujinimo "Licenzijos klaida"
+## MS Offiso klaida po Windows 10/11 atnaujinimo "Licenzijos klaida"
 
 Programinis kodas C# kalbai:
 
 using Microsoft.Win32;
 
-## // Pridedame Network Service prie S-1-5-20 registro rakto teisių.
+### // Pridedame Network Service prie S-1-5-20 registro rakto teisių.
 RegistryKey key = Registry.Users.OpenSubKey("S-1-5-20", true);
 RegistrySecurity rs = new RegistrySecurity();
 
-## // Sukuriame naują naudotojo teisių įrašą ir pridedame Network Service su visais leidimais
+### // Sukuriame naują naudotojo teisių įrašą ir pridedame Network Service su visais leidimais
 RegistryAccessRule rule = new RegistryAccessRule("Network Service",
     RegistryRights.FullControl,
     InheritanceFlags.ContainerInherit | InheritanceFlags.ObjectInherit,
@@ -28,7 +28,7 @@ RegistryAccessRule rule = new RegistryAccessRule("Network Service",
 
 rs.AddAccessRule(rule);
 
-## // Atnaujiname rakto teises su naujais leidimais
+### // Atnaujiname rakto teises su naujais leidimais
 key.SetAccessControl(rs);
 
 If WScript.Arguments.length = 0 Then
@@ -38,7 +38,7 @@ If WScript.Arguments.length = 0 Then
       WScript.ScriptFullName & Chr(34) & " uac", "", "runas", 1
 Else
 
-# Microsoft Internet Explorerio gražinimas į numatytasias naršykles vietoje Edge
+## Microsoft Internet Explorerio gražinimas į numatytasias naršykles vietoje Edge
 
 Programinis kodas VBScript:
 
@@ -70,3 +70,10 @@ Set WshShell = Nothing
 CreateObject("InternetExplorer.Application").Visible=true
 
 End If
+
+## Microsoft Teams vartotoju atvaizdavimas su klaida // Error
+
+Reikų ištrinti failą settings.json
+Failo kelias: _%AppDAta%\Roaming\Microsoft\Teams\settings.json_
+
+
