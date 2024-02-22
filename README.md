@@ -77,4 +77,10 @@ Reikų ištrinti failą settings.json
 
 Failo kelias: _%AppDAta%\Roaming\Microsoft\Teams\settings.json_
 
+## Microsoft OneDrive pridėti pasirinktą aplanką iš bet kurios PC vietos
+
+Naudojam CMD __mklink__ komandą norint susieti pasirinktą aplanką su OneDrive pasiekiamais aplankais. 
+
+mklink /j "C:\Users\ZENKA\OneDrive - ZENKA\DOC_failai" "D:\DOC_failai"
+
 
