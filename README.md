@@ -85,7 +85,18 @@ mklink /j "C:\Users\ZENKA\OneDrive - ZENKA\DOC_failai" "D:\DOC_failai"
 
 ## Microsoft New Teams iconos atvaizdavimas ant Desktop'o
 
-Paleidžiam __RUN__ komanda _Win+R_ ir įvedam komandą __shell:AppsFolder__ atsidariusiame lange ieškome Teams ir surade pertempiam ant darbalaukio
+Paleidžiam __RUN__ komanda _Win+R_ ir įvedam komandą __shell:AppsFolder__ atsidariusiame lange ieškome Teams ir surade pertempiam ant darbalaukio.
+
+Galima tai realizuoti PowerShell pagalba:
+
+Get-AppxPackage MSTeams
+$AppLink = "MSTeams_8wekyb3d8bbwe!MSTeams"
+$ShortuctName = "Teams"
+$WScriptShell = New-Object -ComObject WScript.Shell
+$Shortcut = $WScriptShell.CreateShortcut("$([Environment]::GetFolderPath("Desktop"))\$ShortuctName.lnk")
+$Shortcut.Arguments="shell:AppsFolder\$AppLink"
+$Shortcut.TargetPath = "shell:AppsFolder\$AppLink"
+$Shortcut.Save()
 
 
 
