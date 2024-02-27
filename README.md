@@ -83,4 +83,9 @@ Naudojam CMD __mklink__ komandą norint susieti pasirinktą aplanką su OneDrive
 
 mklink /j "C:\Users\ZENKA\OneDrive - ZENKA\DOC_failai" "D:\DOC_failai"
 
+## Microsoft New Teams iconos atvaizdavimas ant Desktop'o
+
+Paleidžiam __RUN__ komanda _Win+R_ ir įvedam komandą __shell:AppsFolder__ atsidariusiame lange ieškome Teams ir surade pertempiam ant darbalaukio
+
+
 
