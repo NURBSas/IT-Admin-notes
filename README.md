@@ -89,14 +89,14 @@ Paleidžiam __RUN__ komanda _Win+R_ ir įvedam komandą __shell:AppsFolder__ ats
 
 Galima tai realizuoti PowerShell pagalba:
 
-Get-AppxPackage MSTeams
-$AppLink = "MSTeams_8wekyb3d8bbwe!MSTeams"
-$ShortuctName = "Teams"
-$WScriptShell = New-Object -ComObject WScript.Shell
-$Shortcut = $WScriptShell.CreateShortcut("$([Environment]::GetFolderPath("Desktop"))\$ShortuctName.lnk")
-$Shortcut.Arguments="shell:AppsFolder\$AppLink"
-$Shortcut.TargetPath = "shell:AppsFolder\$AppLink"
-$Shortcut.Save()
+    Get-AppxPackage MSTeams
+    $AppLink = "MSTeams_8wekyb3d8bbwe!MSTeams"
+    $ShortuctName = "Teams"
+    $WScriptShell = New-Object -ComObject WScript.Shell
+    $Shortcut = $WScriptShell.CreateShortcut("$([Environment]::GetFolderPath("Desktop"))\$ShortuctName.lnk")
+    $Shortcut.Arguments="shell:AppsFolder\$AppLink"
+    $Shortcut.TargetPath = "shell:AppsFolder\$AppLink"
+    $Shortcut.Save()
 
 
 
