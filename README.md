@@ -95,5 +95,7 @@ Galima tai realizuoti PowerShell pagalba:
     $Shortcut.TargetPath = "shell:AppsFolder\$AppLink"
     $Shortcut.Save()
 
+## Microsoft Outlook 2013-16 klaida 'incorect XML'
 
+Paleidžiam __RUN__ komanda _outlook.exe /resetnavpane_
 
