@@ -95,7 +95,7 @@ Galima tai realizuoti PowerShell pagalba:
     $Shortcut.TargetPath = "shell:AppsFolder\$AppLink"
     $Shortcut.Save()
 
-## Microsoft Outlook 2013-16 klaida 'incorect XML'
+## Microsoft Outlook 2013-16 klaida 'Cannot start Microsoft Outlook. Cannot open the Outlook window. __Invalid XML__, the view cannot be loaded.'
 
 Paleidžiam __RUN__ komanda _outlook.exe /resetnavpane_
 
