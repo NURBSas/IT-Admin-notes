@@ -102,9 +102,13 @@ Paleidžiam __RUN__ komanda: _outlook.exe /resetnavpane_
 ## MS Windows 11 instaliacijos pradžia be interneto (localiam vartotojui sukurti)
 
 Pasiekus regiono pasirinkimą spaudžiam __Shift + F10__
+
 Atsidarius _CMD_ įvedam: __OOBE\BYPASSNRO__ ir paleižiam kompiuterį iš naujo.
+
 Vėl pasileidus instaliacijai spaudžiam __Shift + F10__
+
 Atsidarius _CMD_ įvedam: __ipconfig /release__ spaudžiam _Enter_ ir uždarom _CMD_ langą.
+
 Pasirenkam instaliaciją be interneto.
 
 
