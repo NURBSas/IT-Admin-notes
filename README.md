@@ -124,7 +124,7 @@ secpol.msc -> Local Policies -> Security Options -> User Account Control: Switch
 
 ## MS PowerShell politikos keitimas arba anuliavimas konkrečiai situacijai
 
-Patikrinti kokio yra politikos:
+Patikrinti kokios bendrai yra politikos:
 
      Set-ExecutionPolicy -List
 
