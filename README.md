@@ -111,6 +111,16 @@ Atsidarius _CMD_ įvedam: __ipconfig /release__ spaudžiam _Enter_ ir uždarom _
 
 Pasirenkam instaliaciją be interneto.
 
+## MS Windows 10/11 Nuotolinės pagalbos užtemimo išjungimas (arba įjungimas)
+
+secpol.msc -> Local Policies -> Security Options -> User Account Control: Switch to the secure desktop with promting for elevation (Disable)
+
+     HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+
+     PromptOnSecureDesktop DWORD
+
+     0 = Disable
+     1 = Enable
 
 
 
