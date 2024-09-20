@@ -122,7 +122,16 @@ secpol.msc -> Local Policies -> Security Options -> User Account Control: Switch
      0 = Disable
      1 = Enable
 
+## MS PowerShell politikos keitimas arba anuliavimas konkrečiai situacijai
 
+Patikrinti kokio yra politikos:
+     Set-ExecutionPolicy -List
+
+Pakeisti konkrečiam skriptui:
+     Start-Process powershell -ArgumentList "-ExecutionPolicy Bypass -File 'C:\path\to\your\script.ps1'" -NoNewWindow
+
+Pakeisti konkrečiai sesijai:
+     Set-ExecutionPolicy Bypass -Scope Process
 
 
 
