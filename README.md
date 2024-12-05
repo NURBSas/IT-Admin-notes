@@ -136,7 +136,20 @@ Pakeisti konkrečiai sesijai:
 
      Set-ExecutionPolicy Bypass -Scope Process
 
+## MS Windows profilių migravimas iš vieno PC į kitą PC naudojant USMT servisą
 
+Instaliuojam: adksetup.exe (servisą Windows 10/11)
 
+Tada pasileidžiam CMD administratoriaus teisėm ir nurodom kelią iki serviso.
 
+CMD komanda keliui iki serviso:
 
+     cd /d C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\User State Migration Tool\amd64
+
+CMD komanda sukurti profilio atvaizdui (kelias į C:\tmp\ kur bus suformuotas atvaizdas):
+
+     scanstate c:\tmp\ /o /c /i:miguser.xml /localonly /uel:180 /ue:%computername%\*
+
+CMD komanda atstatanti profilio atvaizdą kitam kompiuteryje:
+
+     loadstate c:\tmp /all /i:miguser.xml /c
