@@ -156,8 +156,10 @@ CMD komanda atstatanti profilio atvaizdą kitam kompiuteryje:
 
 ## Clonezilla atvaizdų iš USB automatizavimo algoritmas
 
-a) USB pirštelio gaminimo procesas su "RUFUS".
-b) DISK GENIUS padarome dvi particijas (Clonezilla ir Images).
+a) __USB__ pirštelio gaminimo procesas su "__RUFUS__".
+
+b) __DISK GENIUS__ padarome dvi particijas (__Clonezilla__ ir __Images__).
+
 c) Kuriame Clonezillos paleidimo mechanizmą.
 
 __Meniu kodas:__ /boot/grub/grub.cfg
