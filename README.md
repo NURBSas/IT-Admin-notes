@@ -153,3 +153,35 @@ CMD komanda sukurti profilio atvaizdui (kelias į C:\tmp\ kur bus suformuotas at
 CMD komanda atstatanti profilio atvaizdą kitam kompiuteryje:
 
      loadstate c:\tmp /all /i:miguser.xml /c
+
+## Clonezilla atvaizdų iš USB automatizavimo algoritmas
+
+a) USB pirštelio gaminimo procesas su "RUFUS".
+b) DISK GENIUS padarome dvi particijas (Clonezilla ir Images).
+c) Kuriame Clonezillos paleidimo mechanizmą.
+
+Meniu kodas: /boot/grub/grub.cfg
+
+     menuentry "Automatinis HP 645 atvaizdo atkūrimas"{
+       set root=(hd0,msdos1)
+       linux /live/vmlinuz boot=live live-config noswap nolocales ocs_prerun="mount /dev/sda2 /home/partimag/" ocs_live_run="ocs-sr -q -c -j2 -k0 -scr -p reboot restoredisk 2024-10-09-11-img-HP-Elitebook nvme0n1" ocs_live_batch="yes" keyboard-layouts="us" vga=791
+       initrd /live/initrd.img
+     }
+
+Reikšmės ir rekomendacijos:
+
+Šaltinio particija (sda2):
+
+Jei USB rakto antroji particija sistemoje matoma kaip sdb2 (o ne sda2), pakeisk ocs_prerun į: text
+
+ocs_prerun="mount /dev/sdb2 /home/partimag/"
+    
+Patikrink tai paleidęs „Clonezilla“ ir naudodamas lsblk.
+
+Tikslinis diskas (nvme0n1):
+
+Jei HDD yra sda, o ne sdb, pakeisk sdb į sda komandoje ocs_live_run.
+
+Atvaizdo pavadinimas:
+
+Pakeisk 2024-10-09-11-img-HP-Elitebook į tikrąjį atvaizdo aplanko pavadinimą, esantį antrojoje particijoje.
