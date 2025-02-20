@@ -160,7 +160,7 @@ a) USB pirštelio gaminimo procesas su "RUFUS".
 b) DISK GENIUS padarome dvi particijas (Clonezilla ir Images).
 c) Kuriame Clonezillos paleidimo mechanizmą.
 
-Meniu kodas: /boot/grub/grub.cfg
+__Meniu kodas:__ /boot/grub/grub.cfg
 
      menuentry "Automatinis HP 645 atvaizdo atkūrimas"{
        set root=(hd0,msdos1)
@@ -168,20 +168,20 @@ Meniu kodas: /boot/grub/grub.cfg
        initrd /live/initrd.img
      }
 
-Reikšmės ir rekomendacijos:
+__Reikšmės ir rekomendacijos:__
 
-Šaltinio particija (sda2):
+Šaltinio particija (__sda2__):
 
-Jei USB rakto antroji particija sistemoje matoma kaip sdb2 (o ne sda2), pakeisk ocs_prerun į: text
+Jei USB rakto antroji particija sistemoje matoma kaip __sdb2__ (o ne __sda2__), pakeisk ocs_prerun į: __text__
 
-ocs_prerun="mount /dev/sdb2 /home/partimag/"
+ocs_prerun="__mount /dev/sdb2 /home/partimag/__"
     
-Patikrink tai paleidęs „Clonezilla“ ir naudodamas lsblk.
+Patikrink tai paleidęs „__Clonezilla__“ ir naudodamas __lsblk__.
 
-Tikslinis diskas (nvme0n1):
+Tikslinis diskas (__nvme0n1__):
 
-Jei HDD yra sda, o ne sdb, pakeisk sdb į sda komandoje ocs_live_run.
+Jei HDD yra __sda__, o ne __nvme0n1__, pakeisk __nvme0n1__ į __sda__ komandoje __ocs_live_run__.
 
 Atvaizdo pavadinimas:
 
-Pakeisk 2024-10-09-11-img-HP-Elitebook į tikrąjį atvaizdo aplanko pavadinimą, esantį antrojoje particijoje.
+Pakeisk __2024-10-09-11-img-HP-Elitebook__ į tikrąjį atvaizdo aplanko pavadinimą, esantį antrojoje particijoje.
