@@ -187,3 +187,16 @@ Jei HDD yra __sda__, o ne __nvme0n1__, pakeisk __nvme0n1__ į __sda__ komandoje 
 Atvaizdo pavadinimas:
 
 Pakeisk __2024-10-09-11-img-HP-Elitebook__ į tikrąjį atvaizdo aplanko pavadinimą, esantį antrojoje particijoje.
+
+## MS Windows 11 RDP aktivacija (jai jos nėra)
+
+__Komandos:__
+
+     Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 0
+
+     Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+
+__Patikrinimas:__
+
+     (Get-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections").fDenyTSConnections
+
