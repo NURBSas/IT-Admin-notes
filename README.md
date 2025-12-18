@@ -9,6 +9,32 @@ Spaudžiam: Enable - ir nustatom "1" dieną.
 
 Paleidžiam kompiuterį iš naujo
 
+## MS Window 11/10 naudingos komandos per Win+R
+
+Pridėti PC prie domeno, atsidaryt „Advanced System Settings“:
+
+    sysdm.cpl
+
+Redaguoti PC vartotojų paskyras "User Accounts":
+
+    netplwiz
+
+Valdyti vidinį PC spausdintuvų serverį "Print Server Properties":
+
+    printui /s
+
+Valdyti lokalias politikas "Local Security Policy":
+
+    secpol.msc
+
+Valdyti grupių politiką "Group Policy Management"
+
+    gpmc.msc
+
+Valdyti AD vartotojus ir PC "Active Directory Users and Computers":
+
+   dsa.msc
+
 ## MS Offiso klaida po Windows 10/11 atnaujinimo "Licenzijos klaida"
 
 Programinis kodas C# kalbai:
