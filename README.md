@@ -33,7 +33,8 @@ Valdyti grupių politiką "Group Policy Management"
 
 Valdyti AD vartotojus ir PC "Active Directory Users and Computers":
 
-   dsa.msc
+    dsa.msc
+
 
 ## MS Offiso klaida po Windows 10/11 atnaujinimo "Licenzijos klaida"
 
