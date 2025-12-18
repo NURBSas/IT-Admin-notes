@@ -35,6 +35,7 @@ Valdyti AD vartotojus ir PC "Active Directory Users and Computers":
 
     dsa.msc
 
+Kitos komandos soon..
 
 ## MS Offiso klaida po Windows 10/11 atnaujinimo "Licenzijos klaida"
 
