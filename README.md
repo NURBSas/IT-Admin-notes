@@ -228,7 +228,7 @@ __Patikrinimas:__
 
      (Get-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections").fDenyTSConnections
 
-__Good Mode__
+## Good Mode
 
 Sukuriame direktorija ir ją pavadinam:
 
