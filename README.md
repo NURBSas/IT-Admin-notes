@@ -241,6 +241,7 @@ Arba į Win+R įrašom:
 ## Greitas kalbos keitimas į Anglų
 
 Paleisti PowerShell kaip Administrator
+
      Set-WinUILanguageOverride -Language en-US
      Set-WinUserLanguageList en-US -Force
      Set-WinSystemLocale en-US
