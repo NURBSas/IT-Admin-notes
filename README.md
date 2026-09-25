@@ -238,3 +238,12 @@ Arba į Win+R įrašom:
 
      shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
 
+## Greitas kalbos keitimas į Anglų
+
+Paleisti PowerShell kaip Administrator
+     Set-WinUILanguageOverride -Language en-US
+     Set-WinUserLanguageList en-US -Force
+     Set-WinSystemLocale en-US
+     Set-Culture en-US
+     Set-WinHomeLocation -GeoId 244  # 244 = United States
+     
