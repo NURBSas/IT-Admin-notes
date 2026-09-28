@@ -247,4 +247,31 @@ Paleisti PowerShell kaip Administrator
      Set-WinSystemLocale en-US
      Set-Culture en-US
      Set-WinHomeLocation -GeoId 244  # 244 = United States
-     
+
+## Konvertacija iš Legacy į UEFI starto SSD/HDD diską po geležies atnaujinimo
+
+Disko nemato BIOS startupe (UEFI neaktyvus)
+Jei sistema iš USB pasileidži ir diskas C: vis dar normaliai atsidaro ir jame yra:
+
+     C:\Windows
+     C:\Users
+     C:\Program Files     
+
+Sukurti ~500 MB FAT32 particiją EFI. Konvertuoti visą diską iš MBR → GPT.
+Priskirti EFI particijai raidę, pvz. S:.
+
+Paleisti:
+
+     bcdboot C:\Windows /s S: /f UEFI
+
+Tai automatiškai sukurs reikalingą struktūrą:
+
+S:\
+└── EFI\
+    └── Microsoft\
+        └── Boot\
+            ├── bootmgfw.efi
+            ├── bootmgr.efi
+            └── BCD
+
+Restart ir vualia.
