@@ -251,7 +251,7 @@ Paleisti PowerShell kaip Administrator
 ## Konvertacija iš Legacy į UEFI starto SSD/HDD diską po geležies atnaujinimo
 
 Disko nemato BIOS startupe (UEFI neaktyvus)
-Jei sistema iš USB pasileidži ir diskas C: vis dar normaliai atsidaro ir jame yra:
+Jei sistema iš USB pasileidžia ir diskas C: vis dar normaliai atsidaro ir jame yra:
 
      C:\Windows
      C:\Users
