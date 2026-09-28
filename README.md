@@ -266,12 +266,12 @@ Paleisti:
 
 Tai automatiškai sukurs reikalingą struktūrą:
 
-S:\
-└── EFI\
-    └── Microsoft\
-        └── Boot\
-            ├── bootmgfw.efi
-            ├── bootmgr.efi
-            └── BCD
+     S:\
+     └── EFI\
+         └── Microsoft\
+             └── Boot\
+                 ├── bootmgfw.efi
+                 ├── bootmgr.efi
+                 └── BCD
 
 Restart ir vualia.
