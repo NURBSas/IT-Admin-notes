@@ -275,3 +275,12 @@ Tai automatiškai sukurs reikalingą struktūrą:
                  └── BCD
 
 Restart ir vualia.
+
+## HDD ar SSD particijos paslėpimas nuo vartotojų
+
+Paleidžiam powershell Administratoriaus teisėm ir redaguojam (Diskas S kaip pavizdys)
+
+    diskpart
+    select volume S
+    remove letter=S
+    exit
